@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trip Planner | Plan Your Trip</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+</head>
+<body>
+  <header>
+    <h1>Plan Your Trip</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="planner.html">Planner</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="planner">
+    <form id="trip-form">
+      <label>Start Date: <input type="date" id="start-date" required></label>
+      <label>End Date: <input type="date" id="end-date" required></label>
+      <label>Preferred Temperature (°F): 
+        <input type="range" id="min-temp" min="40" max="100" value="65"/>
+        <span id="min-temp-val">65</span>°F
+      </label>
+      <label>Exclude Rainy Places: <input type="checkbox" id="no-rain"></label>
+      <label>City (optional): <input type="text" id="city-input" placeholder="e.g. Tokyo"></label>
+      <label>Or Choose a Continent:
+        <select id="continent">
+          <option value="">-- Select --</option>
+          <option value="North America">North America</option>
+          <option value="Europe">Europe</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="South America">South America</option>
+        </select>
+      </label>
+      <button type="submit">Find Destinations</button>
+    </form>
+
+    <section id="results"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
